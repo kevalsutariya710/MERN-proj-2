@@ -105,7 +105,6 @@ app.post('/login', async (req, res) => {
 
 
 // getUserData
-
 app.post('/home', async (req, res) => {
     const { token } = req.body;
 
