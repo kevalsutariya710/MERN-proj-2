@@ -124,5 +124,21 @@ app.post('/home', async (req, res) => {
     }
 })
 
+
+// get AllData
+app.get('/getdata', async (req, res) => {
+
+    try {
+        const data = await User.find({});
+        res.send({ status: 'ok', data: data })
+
+    } catch (error) {
+        console.log(error);
+
+    }
+
+})
+
+
 // Server
 app.listen(5000, () => console.log('listening on 5000'));
